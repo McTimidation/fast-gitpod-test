@@ -1,5 +1,7 @@
 # Use an official Python runtime as a parent image
-FROM python:3.11
+FROM docker.io/gitpod/workspace-python-3.11:latest
+
+USER root
 
 # Set Python to run in unbuffered mode
 ENV PYTHONUNBUFFERED 1
@@ -34,7 +36,7 @@ ENV PATH="$HOME/.pg_ctl/bin:$PATH"
 ENV DATABASE_URL="postgresql://gitpod@localhost"
 ENV PGHOSTADDR="127.0.0.1"
 ENV PGDATABASE="postgres"
-COPY --chown=gitpod:gitpod postgresql-hook.bash $HOME/.bashrc.d/200-postgresql-launch
+# COPY --chown=gitpod:gitpod postgresql-hook.bash $HOME/.bashrc.d/200-postgresql-launch
 
 USER gitpod
 
