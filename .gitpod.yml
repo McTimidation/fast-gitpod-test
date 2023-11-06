@@ -9,3 +9,4 @@ vscode:
     - ms-python.python
     - mtxr.sqltools
     - rangav.vscode-thunder-client
+    - mtxr.sqltools-driver-pg
